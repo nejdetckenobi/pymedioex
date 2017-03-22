@@ -208,17 +208,11 @@ PyInit_medioex(void)
 int
 main(int argc, char *argv[])
 {
-    wchar_t *program = Py_DecodeLocale(argv[0], NULL);
-    if (program == NULL) {
-        fprintf(stderr, "Fatal error: cannot decode argv[0]\n");
-        exit(1);
-    }
-
     /* Add a built-in module, before Py_Initialize */
     PyImport_AppendInittab("medioex", PyInit_medioex);
 
     /* Pass argv[0] to the Python interpreter */
-    Py_SetProgramName(program);
+    Py_SetProgramName(argv[0]);
 
     /* Initialize the Python interpreter.  Required. */
     Py_Initialize();
@@ -229,7 +223,7 @@ main(int argc, char *argv[])
     PyImport_ImportModule("medioex");
 
 
-    PyMem_RawFree(program);
+    PyMem_RawFree(argv[0]);
     return 0;
 }
 

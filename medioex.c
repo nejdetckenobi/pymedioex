@@ -144,6 +144,22 @@ close_all(PyObject *self, PyObject *args)
 	return Py_BuildValue("");
 }
 
+static PyObject *
+temp_init(PyObject *self, PyObject *args)
+{
+	pe2a_getTemperature_init();
+	return Py_BuildValue("");
+}
+
+static PyObject *
+temp_read(PyObject *self, PyObject *args)
+{
+	int val, getval;
+	if (!PyArg_ParseTuple(args, "i", &getval)) return NULL;
+	val = pe2a_getTemperature(getval);
+	return PyLong_FromLong(val);
+}
+
 static PyMethodDef MedIOExMethods[] = {
 	{"do_di_init", do_di_init, METH_VARARGS,
 	 "Initializes Digital Outputs and Digital Inputs"},
@@ -161,6 +177,10 @@ static PyMethodDef MedIOExMethods[] = {
 	 "Reads from an Analog Input"},
 	{"close_all", close_all, METH_VARARGS,
 	 "Closes all ports"},
+	{"temp_init", temp_init, METH_VARARGS,
+	 "Initializes temperature sensor"},
+	{"temp_read", temp_read, METH_VARARGS,
+	 "Reads from temperature sensor. If its argument is 1, it reads from lm75bd"},
 	{NULL, NULL, 0, NULL} // Sentinel
 };
 

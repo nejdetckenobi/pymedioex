@@ -40,3 +40,10 @@ Then you can open a shell and use library like this
 >>> mediex.ao_init()  # Need for writing to Analog Inputs initialization
 >>> medioex.ao_write(3, 4095)  # Writes 4095 to Analog Output 3
 ```
+
+
+## Maintainers: 
+
+[Ulku Bayraktar](https://github.com/bayraktarulku)
+
+[Nejdet Çağdaş Yücesoy](https://github.com/nejdetckenobi)

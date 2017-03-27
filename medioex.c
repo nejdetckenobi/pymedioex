@@ -154,10 +154,11 @@ temp_init(PyObject *self, PyObject *args)
 static PyObject *
 temp_read(PyObject *self, PyObject *args)
 {
-	int val, getval;
+	int getval;
+	double val;
 	if (!PyArg_ParseTuple(args, "i", &getval)) return NULL;
 	val = pe2a_getTemperature(getval);
-	return PyLong_FromLong(val);
+	return PyFloat_FromDouble(val);
 }
 
 static PyMethodDef MedIOExMethods[] = {

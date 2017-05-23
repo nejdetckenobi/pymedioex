@@ -28,6 +28,7 @@ Here are the steps of installation:
 - Open a terminal and write `sudo python3 setup.py install`
 
 Then you can open a shell and use library like this
+(Note that you might need to be superuser before opening the shell.)
 
 ```
 >>> import medioex

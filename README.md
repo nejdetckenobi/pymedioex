@@ -35,7 +35,7 @@ Then you can open a shell and use library like this
 >>> medioex.do_di_init()  # Need for using Digital Inputs/Digital Outputs initialization
 >>> medioex.do_write(3, 1)  # Sets Digital Output 3 HIGH
 >>> a = medioex.di_read(5)  # Reads from Digital Input 5
->>> medioex.ro_write(13, 1)  # Sets Relay Output 13 HIGH
+>>> medioex.do_write(13, 1)  # Sets Relay Output 13 HIGH
 >>> medioex.ai_init()  # Need for reading from Analog Inputs initialization
 >>> b = medioex.ai_read(4)  # Reads from Analog Input 4
 >>> mediex.ao_init()  # Need for writing to Analog Inputs initialization

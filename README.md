@@ -4,6 +4,13 @@ A Python extension for using MedIOEx card properly.
 
 ## Installation
 
+First of all, be sure you have `python3-dev` and `build-essential` packages installed.
+If they're not, install them first by typing:
+
+`sudo apt-get install python3-dev build-essential`
+
+That's all for dependencies.
+
 Here are the steps of installation:
 
 - Be sure you have `bcm2835` library installed. Here is the [install link](https://github.com/pe2a/MedIOEx/blob/master/bcm2835-1.50.tar.gz).

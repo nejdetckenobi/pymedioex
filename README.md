@@ -49,7 +49,9 @@ Then you can open a shell and use library like this
 >>> medioex.ao_write(3, 4095)  # Writes 4095 to Analog Output 3
 ```
 
+## Notes
 
+If you want to read analog inputs continuously, please put a sleeping time '>= 0.2s'
 ## Maintainers: 
 
 [Ulku Bayraktar](https://github.com/bayraktarulku)

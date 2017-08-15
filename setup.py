@@ -10,7 +10,7 @@ module = Extension('medioex',
                    )
 
 setup(name='PyMedIOEx',
-      version='1.4',
+      version='1.4.1',
       description='A Python3 wrapper for MedIOEx for Raspberry Pi 3',
       author='Nejdet Çağdaş Yücesoy / Ülkü Bayraktar',
       author_email='nejdetyucesoy@gmail.com',

@@ -1,3 +1,5 @@
+# DEPRECATION NOTE: I really don't have time to maintain this repo. You should really follow [this repo](https://github.com/beyaznet/python-medioex-module) instead of mine.
+
 # pymedioex
 A Python extension for using MedIOEx card properly.
 
